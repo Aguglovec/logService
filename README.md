@@ -1,15 +1,3 @@
-# Build on 11TA Template (see below)
-
-** The idea is to build a onepager that can be easily edited from CMS (non-existent at the moment).**
-
-> ### List of changes
->
-> - Replaced index.md with index.njk in src
-> - index.njk iterates over files in src/posts and renders index.html with components from src/\_includes/components
-> - All files in src/posts need to have minimal config : date, title, component
-> - Components will be rendered in date order from src/posts/\*.md configs
-> - To pass some parameter( like color, bg, title, text, etc.) from config to component the later should adress to post.data.your_parameter_name
-
 # 11TA - 11ty, TailwindCSS, & Alpine.js Template
 
 > **Update v2.1, 221018 - It's working again!**
