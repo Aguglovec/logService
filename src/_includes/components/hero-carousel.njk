@@ -1,0 +1,11 @@
+<div class="mb-16 {{ post.data.heroSettings.height.mobile or "h-1/1" }} sm:{{ post.data.heroSettings.height.desktop or post.data.heroSettings.height.mobile or "h-1/1" }}">
+
+  <div class="h-full main-carousel" data-flickity='{"lazyLoad":"1", "wrapAround":true}'>
+    {% for image in post.data.heroSettings.carousel.images %}
+      <div class="w-full h-full {{ post.data.heroSettings.bg.imagePosition or 'bg-center' }} bg-no-repeat bg-cover carousel-cell" style="background-image: url(/assets/images/{{ image }});">       
+</div>
+
+    {% endfor %}
+  </div>
+
+</div>

@@ -1,0 +1,9 @@
+<header class="relative lg:overflow-hidden {{ post.data.heroSettings.bg.color or 'bg-black' }} {{ post.data.heroSettings.height.mobile or 'h-1/1' }} sm:{{ post.data.heroSettings.height.desktop or post.data.heroSettings.height.mobile or 'h-1/1' }}">
+  <div class="absolute inset-0 z-negative {{ post.data.heroSettings.bg.opacityMobile or 'opacity-100' }} md:{{ post.data.heroSettings.bg.opacityDesktop or post.data.heroSettings.bg.opacityMobile or 'opacity-100' }}">
+    <video src="/assets/video/{{ post.data.heroSettings.bg.video }}" autoplay muted loop class="object-cover w-full h-full"></video>
+  </div>
+
+  {# Shared across hero components  #}
+  {% include "components/hero-text-overlay.njk" %}
+
+</header>
