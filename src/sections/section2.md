@@ -1,5 +1,6 @@
 ---
 title: Blockquotes - Shortcodes
+permalink: false
 date: 2020-09-21
 excerpt: Blockquotes are easy, even in Markdown. But what if you want to style them?
 author: shane-robinson
@@ -17,7 +18,6 @@ tags:
   - shortcodes
   - emoji
   - markdown
-
 component: hero-graphic
 hero: graphic # options: carousel, graphic, video, split (text & image)
 heroSettings:

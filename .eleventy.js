@@ -23,7 +23,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight)
 
 
-  eleventyConfig.addPlugin(pluginSvgSprite, {
+	eleventyConfig.addPlugin(pluginSvgSprite, {
     path: "./src/assets/svg",
     globalClasses: "fill-current"
 	})
@@ -76,14 +76,14 @@ module.exports = function (eleventyConfig) {
 		if (process.env.ELEVENTY_ENV !== 'production')
 			return [...collection.getFilteredByGlob('./src/posts/*.md')]
 		else
-			return [...collection.getFilteredByGlob('./src/posts/*.md')].filter((post) => !post.data.draft)
+			return [...collection.getFilteredByGlob('./src/posts/*.md')].filter((post) => !draft)
 	})
 
 	eleventyConfig.addCollection('section', (collection) => {
 		if (process.env.ELEVENTY_ENV !== 'production')
 			return [...collection.getFilteredByGlob('./src/sections/*.md')]
 		else
-			return [...collection.getFilteredByGlob('./src/sections/*.md')].filter((post) => !post.data.draft)
+			return [...collection.getFilteredByGlob('./src/sections/*.md')].filter((post) => !draft)
 	})
 
 	// TAGLIST used from the official eleventy-base-blog  https://github.com/11ty/eleventy-base-blog/blob/master/.eleventy.js
@@ -161,6 +161,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
 	eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
 	eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
+	eleventyConfig.addLayoutAlias('section', 'layouts/section.njk')
 	eleventyConfig.addLayoutAlias('author', 'layouts/author.njk')
 
 	/**

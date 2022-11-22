@@ -1,5 +1,6 @@
 ---
 title: test
+permalink: false
 date: 2020-09-20
 excerpt: Not yet native in 11ty, creating draft posts is easy.
 author: shane-robinson
@@ -17,7 +18,6 @@ tags:
   - structure
   - customization
   - frontmatter
-
 component: hero-graphic
 hero: graphic # options: carousel, graphic, video, split (text & image)
 heroSettings:
