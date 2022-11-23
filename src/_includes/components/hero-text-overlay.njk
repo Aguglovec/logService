@@ -5,9 +5,9 @@
   <div class="pt-4 pr-12 text-lg font-light md:text-2xl lg:text-3xl {{ heroSettings.subheadingTextColor }}">
     {{ heroSettings.subheadingText | safe }}
   </div>
-  {% if heroSettings.buttonText %}
-    <div class="w-full mt-12 ">
-      <a href="{{ heroSettings.buttonURL }}" class="p-4 rounded-lg {{ heroSettings.buttonTextColor or colors.buttonCustom.text or colors.buttonDefault.text }} {{ heroSettings.buttonBgColor or colors.buttonCustom.bg or colors.buttonDefault.bg }} hover:{{ colors.buttonCustom.textHover or colors.buttonDefault.textHover }} hover:{{ heroSettings.buttonBgHover or colors.buttonCustom.bgHover or colors.buttonDefault.bgHover }} {{ heroSettings.buttonBorder or colors.buttonCustom.border or colors.buttonDefault.border }}">{{ heroSettings.buttonText }}</a>
-    </div>
-  {% endif %}
+    {% if heroSettings.buttonText %}
+        <div class="w-full mt-12 ">
+          <a href="{{ heroSettings.buttonURL }}" class="p-4 rounded-lg {{ heroSettings.buttonTextColor or colors.buttonCustom.text or colors.buttonDefault.text }} {{ heroSettings.buttonBgColor or colors.buttonCustom.bg or colors.buttonDefault.bg }} hover:{{ colors.buttonCustom.textHover or colors.buttonDefault.textHover }} hover:{{ heroSettings.buttonBgHover or colors.buttonCustom.bgHover or colors.buttonDefault.bgHover }} {{ heroSettings.buttonBorder or colors.buttonCustom.border or colors.buttonDefault.border }}">{{ heroSettings.buttonText }}</a>
+        </div>
+    {% endif %}
 </div>
