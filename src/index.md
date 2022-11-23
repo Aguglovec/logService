@@ -6,7 +6,7 @@ excerpt: # used for page excerpts and META (will be overwritten if SEO used belo
 author: shane-robinson # only displayed on Post lists and detail views. Defaults to _data/meta.authorURL
 eleventyNavigation: # Required if want to display in Main Nav Bar
   key: main # "main" is required
-  title: Welcome # as it will appear in the nav
+  title: Onepager # as it will appear in the nav
   order: 1 # order to display in the nav (index = 1)
 seo: # SEO values are used for OG and will overwrite 'title' and 'excerpt' above
   title:
@@ -42,6 +42,16 @@ heroSettings:
       - home/8.jpg
       - home/9.jpg
 ---
+
+{%- for section in collections.sections -%}
+
+    {%- set component = ['components/', section.data.component, '.njk'] -%}
+    {%- set heroSettings = section.data.heroSettings -%}
+
+    {%- include component | join -%}
+
+{%- endfor -%}
+
 
 We set out to build a starter project template for [11ty](https://11ty.dev '11ty Static Site Generator') that has [TailwindCSS](https://tailwindcss.com 'TailwindCSS Utility-First CSS Framework') and [Alpine.js](https://github.com/alpinejs/alpine 'Alpine.js : Think of it like Tailwind for JavaScript') baked in.
 
@@ -134,3 +144,4 @@ There are several **Shortcodes** _(both single and paired)_ and **Filters** to a
 - "Themed" versions for Portfolios/Creatives, Agencies, Digital Gardens, etc.
 - Fully documented migration of Wordpress to 11ty
 - [Snipcart](https://snipcart.com/) integration
+
