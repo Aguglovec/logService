@@ -1,0 +1,7 @@
+<header class="relative {{ sectionSettings.bg.color or 'bg-black' }} lg:overflow-hidden {{ sectionSettings.height.mobile or 'h-1/1' }} sm:{{ sectionSettings.height.desktop or sectionSettings.height.mobile or 'h-1/1' }}">
+  <div class="absolute inset-0 z-negative  bg-fixed bg-no-repeat bg-cover {{ sectionSettings.bg.imagePosition or 'bg-center' }} {{ sectionSettings.bg.opacityMobile or 'opacity-100' }} md:{{ sectionSettings.bg.opacityDesktop or sectionSettings.bg.opacityMobile or 'opacity-100' }}" style="background-image: url(/assets/images/{{ sectionSettings.bg.image }});"></div>
+
+  {# Shared across hero components  #}
+  {% include "components/hero-text-overlay-copy.njk" %}
+
+</header>
