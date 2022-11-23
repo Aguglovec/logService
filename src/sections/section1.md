@@ -18,7 +18,7 @@ tags:
   - structure
   - customization
   - frontmatter
-component: hero-video-copy
+component: hero-video-section
 hero: graphic # options: carousel, graphic, video, split (text & image)
 sectionSettings:
   height:

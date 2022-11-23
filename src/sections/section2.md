@@ -18,7 +18,7 @@ tags:
   - shortcodes
   - emoji
   - markdown
-component: hero-graphic-copy
+component: hero-graphic-section
 hero: graphic # options: carousel, graphic, video, split (text & image)
 sectionSettings:
   height:

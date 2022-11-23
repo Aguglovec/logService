@@ -2,6 +2,6 @@
   <div class="absolute inset-0 z-negative  bg-fixed bg-no-repeat bg-cover {{ sectionSettings.bg.imagePosition or 'bg-center' }} {{ sectionSettings.bg.opacityMobile or 'opacity-100' }} md:{{ sectionSettings.bg.opacityDesktop or sectionSettings.bg.opacityMobile or 'opacity-100' }}" style="background-image: url(/assets/images/{{ sectionSettings.bg.image }});"></div>
 
   {# Shared across hero components  #}
-  {% include "components/hero-text-overlay-copy.njk" %}
+  {% include "components/hero-text-overlay-section.njk" %}
 
 </header>
