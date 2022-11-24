@@ -1,0 +1,14 @@
+<div class="absolute flex flex-col items-start justify-center h-full {{ sectionSettings.headingTextColor or 'text-white' }} {{ structure.g_pageWidth }}">
+  <div class="text-4xl font-semibold leading-tight {{ sectionSettings.headingTextCase }} md:text-6xl">
+    {{ sectionSettings.headingText | safe  }}
+  </div>
+  <div class="pt-4 pr-12 text-lg font-light md:text-2xl lg:text-3xl {{ sectionSettings.subheadingTextColor }}">
+    {{ sectionSettings.subheadingText | safe }}
+  </div>
+  {% if sectionSettings.buttonText %}
+    <div class="w-full mt-12 ">
+      <a href="{{ sectionSettings.buttonURL }}" class="p-4 rounded-lg {{ sectionSettings.buttonTextColor or colors.buttonCustom.text or colors.buttonDefault.text }} {{ sectionSettings.buttonBgColor or colors.buttonCustom.bg or colors.buttonDefault.bg }} hover:{{ colors.buttonCustom.textHover or colors.buttonDefault.textHover }} hover:{{ sectionSettings.buttonBgHover or colors.buttonCustom.bgHover or colors.buttonDefault.bgHover }} {{ sectionSettings.buttonBorder or colors.buttonCustom.border or colors.buttonDefault.border }}">{{ sectionSettings.buttonText }}</a>
+    </div>
+  {% endif %}
+  {{ content | safe }}
+</div>

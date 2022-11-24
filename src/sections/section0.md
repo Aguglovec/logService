@@ -18,9 +18,9 @@ tags:
   - structure
   - customization
   - frontmatter
-component: hero-graphic
+component: hero-graphic-section
 hero: graphic # options: carousel, graphic, video, split (text & image)
-heroSettings:
+sectionSettings:
   height:
     mobile: # options = h-1/1 (default = full screen), h-1/2, h-1/3, h-3/4, h-9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
     desktop: # leave blank to inherit "mobile" height (default = full screen)

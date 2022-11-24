@@ -1,0 +1,36 @@
+<main class="lg:relative {{ sectionSettings.bg.color or 'bg-black' }} {{ sectionSettings.height.mobile or 'h-1/1' }} sm:{{ sectionSettings.height.desktop or sectionSettings.height.mobile or 'h-1/1' }}">
+  <div
+        class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left"
+      >
+    <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+
+      <h2
+            class="text-4xl font-semibold leading-10 tracking-tight {{ sectionSettings.headingTextColor or 'text-white' }} sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl"
+          >
+        {{ sectionSettings.headingText | safe }}
+      </h2>
+      <p
+            class="max-w-md mx-auto mt-3 text-lg {{ sectionSettings.subheadingTextColor }} sm:text-xl md:mt-5 md:max-w-3xl"
+          >
+        {{ sectionSettings.subheadingText | safe }}
+
+      </p>
+
+      {% if sectionSettings.buttonText %}
+        <div class="w-full mt-12 ">
+          <a href="{{ sectionSettings.buttonURL }}" class="p-4 rounded-lg {{ sectionSettings.buttonTextColor or colors.buttonCustom.text or colors.buttonDefault.text }} {{ sectionSettings.buttonBgColor or colors.buttonCustom.bg or colors.buttonDefault.bg }} hover:{{ colors.buttonCustom.textHover or colors.buttonDefault.textHover }} hover:{{ sectionSettings.buttonBgHover or colors.buttonCustom.bgHover or colors.buttonDefault.bgHover }} {{ sectionSettings.buttonBorder or colors.buttonCustom.border or colors.buttonDefault.border }}">{{ sectionSettings.buttonText }}</a>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+  <div
+        class="relative w-full h-1/2 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
+      >
+    <img
+          class="absolute inset-0 object-cover w-full h-full"
+          src="/assets/images/{{ sectionSettings.bg.image }}"
+          alt="Hero Image"
+/>
+  </div>
+</main>
