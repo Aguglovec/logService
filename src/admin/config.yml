@@ -1,12 +1,21 @@
+local_backend: true
 backend:
   name: github
   repo: druimio/11ty-onepager
-  branch: develop # Branch to update (optional; defaults to master)
+  branch: feature/ordering # Branch to update (optional; defaults to master)
   base_url: https://onepager.druim.io
   auth_endpoint: /api/auth
-media_folder: assets/imgages
+media_folder: assets/images
 public_folder: /img
 collections:
+  - name: 'sections'
+    label: 'All Sections'
+    folder: 'src/sections'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
   - name: 'section video'
     filter: { field: "section", value: "hero-video-section" }
     label: 'Sections Video'
@@ -37,3 +46,22 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+  - name: settings
+    label: Settings
+    create: true
+    files:
+    - name: collectionOrder
+      label: Collection Order
+      create: true
+      file: src/utils/collectionOrder.yml
+      fields:
+      - label: Collection
+        name: collection
+        widget: list
+        fields:
+          - label: Collection Name
+            name: collectionName
+            widget: relation
+            collection: sections
+            searchFields: [title]
+            valueField: title
