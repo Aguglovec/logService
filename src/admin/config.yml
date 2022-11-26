@@ -48,19 +48,17 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
   - name: settings
     label: Settings
-    create: true
     files:
-    - name: collectionOrder
-      label: Collection Order
-      create: true
+    - name: sectionOrder
+      label: Section Order
       file: src/utils/collectionOrder.yml
       fields:
-      - label: Collection
-        name: collection
+      - label: Section
+        name: section
         widget: list
         fields:
-          - label: Collection Name
-            name: collectionName
+          - label: Section Name
+            name: sectionName
             widget: relation
             collection: sections
             searchFields: [title]
