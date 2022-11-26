@@ -9,7 +9,7 @@ public_folder: /img
 collections:
   - name: 'section video'
     filter: { field: "section", value: "hero-video-section" }
-    label: 'Sections'
+    label: 'Sections Video'
     folder: 'src/sections'
     create: true
     editor:
@@ -19,7 +19,7 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
   - name: 'section graphic'
     filter: { field: "section", value: "hero-graphic-section" }
-    label: 'Sections'
+    label: 'Sections Graphic'
     folder: 'src/sections'
     create: true
     editor:
@@ -29,7 +29,7 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
   - name: 'section split'
     filter: { field: "section", value: "hero-split-section" }
-    label: 'Sections'
+    label: 'Sections Split'
     folder: 'src/sections'
     create: true
     editor:
