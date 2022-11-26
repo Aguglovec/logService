@@ -24,8 +24,7 @@ pagination:
 
 {% for section in sections | reverse %}
 
-    {% set component = ['components/', section.data.component, '.njk'] %}
-
+    {% set component = ['components/', section.data.section, '.njk'] %}
     {% set sectionSettings = section.data.sectionSettings %}
     {% include component | join %}
 

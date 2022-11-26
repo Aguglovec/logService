@@ -4,18 +4,36 @@ backend:
   branch: develop # Branch to update (optional; defaults to master)
   base_url: https://onepager.druim.io
   auth_endpoint: /api/auth
-media_folder: static/img
+media_folder: assets/imgages
 public_folder: /img
 collections:
-  - name: 'section'
+  - name: 'section video'
+    filter: { field: "section", value: "hero-video-section" }
     label: 'Sections'
     folder: 'src/sections'
     create: true
-    slug: '{{slug}}'
     editor:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'section graphic'
+    filter: { field: "section", value: "hero-graphic-section" }
+    label: 'Sections'
+    folder: 'src/sections'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title Graphic', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+  - name: 'section split'
+    filter: { field: "section", value: "hero-split-section" }
+    label: 'Sections'
+    folder: 'src/sections'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
