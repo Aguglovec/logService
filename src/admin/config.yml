@@ -2,13 +2,14 @@ local_backend: true
 backend:
   name: github
   repo: druimio/11ty-onepager
-  branch: feature/ordering # Branch to update (optional; defaults to master)
+  branch: develop # Branch to update (optional; defaults to master)
   base_url: https://onepager.druim.io
   auth_endpoint: /api/auth
 media_folder: assets/images
 public_folder: /img
 collections:
   - name: 'sections'
+    hide: true
     label: 'All Sections'
     folder: 'src/sections'
     editor:
