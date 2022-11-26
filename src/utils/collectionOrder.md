@@ -1,0 +1,5 @@
+---
+collection:
+  - collectionName: Blockquotes - Shortcodes
+  - collectionName: test
+---
