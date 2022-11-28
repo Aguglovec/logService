@@ -5,6 +5,10 @@ date: 2020-09-20
 excerpt: Not yet native in 11ty, creating draft posts is easy.
 author: shane-robinson
 draft: false
+eleventyNavigation: # Required if want to display in Main Nav Bar
+  key: main # "main" is required
+  title: hero # as it will appear in the nav
+  order: 2 # order to display in the nav (index = 1)
 seo:
   title:
   description:
