@@ -22,11 +22,10 @@ pagination:
 ---
 
 {% for section in sections | reverse %}
-
     {% set component = ['components/', section.data.component, '.njk'] %}
 
     {% set sectionSettings = section.data.sectionSettings %}
     {% include component | join %}
 
-
 {% endfor %}
+

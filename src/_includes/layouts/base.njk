@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="/css/styles.css"/>
     <link rel="alternate" type="application/atom+xml" title="RSS Feed for {{ meta.siteName }}" href="/feed.xml"/>
     {# Only include the Flickity js if this page uses a hero.carousel  #}
-    {% if hero == "carousel" or product.carousel -%}
+
+    {% if hero == "carousel" or carousel == true or product.carousel -%}
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+
+    {% else %}
+      {% for section in sections | reverse %}
+        {% if section.data.component == "hero-carousel-section" %}
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+      
+        {% endif %}
+      {% endfor %}
+
     {%- endif -%}
+
     {%- include "partials/head.njk" %}
     {% set prismOkaidia %}{% include "src/assets/css/prism-okaidia.css" %}{% endset -%}
     <style>
@@ -50,10 +62,21 @@
     <script type="module" src="/assets/scripts/main.js" defer></script>
 
     {# Only include the Flickity js if this page uses a hero.carousel  #}
-    {% if hero == "carousel" or product.carousel %}
+    {% if hero == "carousel" or carousel == true or product.carousel %}
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
       <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
-    {% endif %}
+
+
+    {% else %}
+      {% for section in sections | reverse %}
+        {% if section.data.component == "hero-carousel-section" %}
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+        {% endif %}
+      {% endfor %}
+
+
+        {% endif %}
 
   </body>
 </html>

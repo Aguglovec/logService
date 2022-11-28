@@ -1,5 +1,5 @@
 <div class="mb-16 {{ sectionSettings.height.mobile or "h-1/1" }} sm:{{ sectionSettings.height.desktop or sectionSettings.height.mobile or "h-1/1" }}">
-  <div class="h-full main-carousel" data-flickity='{"lazyLoad":"1", "wrapAround":true}'>
+  <div class="h-full main-carousel" data-flickity='{"lazyLoad":"1", "wrapAround":true, "fullscreen": true}'>
 
     {% for image in sectionSettings.carousel.images %}
       <div class="w-full h-full {{ sectionSettings.bg.imagePosition or 'bg-center' }} bg-no-repeat bg-cover carousel-cell" style="background-image: url(/assets/images/{{ image }});"></div>
