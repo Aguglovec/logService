@@ -52,15 +52,17 @@ collections:
     files:
     - name: sectionOrder
       label: Section Order
-      file: src/utils/collectionOrder.yml
+      extension: "json"
+      format: "json"
+      file: src/_data/sectionOrder/sectionOrder.json
       fields:
       - label: Section
         name: section
         widget: list
         fields:
           - label: Section Name
-            name: sectionName
+            name: sectionID
             widget: relation
             collection: sections
-            searchFields: [title]
-            valueField: title
+            searchFields: [sectionID]
+            valueField: sectionID

@@ -5,12 +5,15 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const markdownIt = require('markdown-it')
 const markdownItEmoji = require('markdown-it-emoji')
 const pluginSvgSprite = require("eleventy-plugin-svg-sprite");
+const yaml = require("js-yaml");
 
 // const collections = require('./utils/collections.js')
 const filters = require('./utils/filters.js')
 const shortcodes = require('./utils/shortcodes.js')
 const pairedshortcodes = require('./utils/paired-shortcodes.js')
 // const transforms = require('./utils/transforms.js')
+
+
 
 module.exports = function (eleventyConfig) {
 	/**
@@ -21,7 +24,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginRss)
 	eleventyConfig.addPlugin(pluginNavigation)
 	eleventyConfig.addPlugin(syntaxHighlight)
-
 
 	eleventyConfig.addPlugin(pluginSvgSprite, {
     path: "./src/assets/svg",
@@ -85,6 +87,7 @@ module.exports = function (eleventyConfig) {
 		else
 			return [...collection.getFilteredByGlob('./src/sections/*.md')].filter((post) => !draft)
 	})
+
 
 	// TAGLIST used from the official eleventy-base-blog  https://github.com/11ty/eleventy-base-blog/blob/master/.eleventy.js
 	eleventyConfig.addCollection('tagList', function (collection) {
