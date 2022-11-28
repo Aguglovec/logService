@@ -21,7 +21,7 @@ pagination:
   reverse: true
   alias: sections
 ---
-{% for sectionOrder in sectionOrder.sectionOrder.section | reverse %}
+{% for sectionOrder in sectionOrder.sectionOrder.section %}
     {% set sectionID = sectionOrder.sectionID %}
     {% for section in sections | reverse %}
         {% if section.data.sectionID == sectionID %}
