@@ -8,8 +8,10 @@ author: shane-robinson
 draft:
 eleventyNavigation: # Required if want to display in Main Nav Bar
   key: main # "main" is required
-  title: Contact us # as it will appear in the nav
-  order: 3 # order to display in the nav (index = 1)
+  title: Carousel # as it will appear in the nav
+  order: 4 # order to display in the nav (index = 1)
+  url: unique_id_5
+  local: true  
 seo:
   title:
   description:

@@ -1,4 +1,4 @@
-<header class="relative lg:overflow-hidden {{ sectionSettings.bg.color or 'bg-black' }} {{ sectionSettings.height.mobile or 'h-1/1' }} sm:{{ sectionSettings.height.desktop or sectionSettings.height.mobile or 'h-1/1' }}">
+<header class="relative lg:overflow-hidden {{ sectionSettings.bg.color or 'bg-black' }} {{ sectionSettings.height.mobile or 'h-1/1' }} sm:{{ sectionSettings.height.desktop or sectionSettings.height.mobile or 'h-1/1' }}" id="{{ section.data.eleventyNavigation.url }}">
   <div class="absolute inset-0 z-negative {{ sectionSettings.bg.opacityMobile or 'opacity-100' }} md:{{ sectionSettings.bg.opacityDesktop or sectionSettings.bg.opacityMobile or 'opacity-100' }}">
     <video src="/assets/video/{{ sectionSettings.bg.video }}" autoplay muted loop class="object-cover w-full h-full"></video>
   </div>

@@ -6,6 +6,12 @@ date: 2020-09-24
 excerpt: Blockquotes are easy, even in Markdown. But what if you want to style them?
 author: shane-robinson
 draft:
+eleventyNavigation: # Required if want to display in Main Nav Bar
+  key: main # "main" is required
+  title: Contact us # as it will appear in the nav
+  order: 3 # order to display in the nav (index = 1)
+  url: contact
+  local: true  
 seo:
   title:
   description:

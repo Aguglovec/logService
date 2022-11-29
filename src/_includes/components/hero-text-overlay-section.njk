@@ -1,4 +1,4 @@
-<div class="absolute flex flex-col items-start justify-center h-full {{ sectionSettings.headingTextColor or 'text-white' }} {{ structure.g_sectionTextWidth }}">
+<div class="absolute flex flex-col items-start justify-center h-full {{ sectionSettings.headingTextColor or 'text-white' }} {{ structure.g_sectionTextWidth }}" id="{{ section.data.eleventyNavigation.url }}">
   <div class="text-4xl font-semibold leading-tight {{ sectionSettings.headingTextCase }} md:text-6xl">
     {{ sectionSettings.headingText | safe  }}
   </div>

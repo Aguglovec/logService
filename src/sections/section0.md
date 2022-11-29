@@ -8,8 +8,10 @@ author: shane-robinson
 draft: false
 eleventyNavigation: # Required if want to display in Main Nav Bar
   key: main # "main" is required
-  title: hero # as it will appear in the nav
+  title: Hero # as it will appear in the nav
   order: 2 # order to display in the nav (index = 1)
+  url: hero
+  local: true  
 seo:
   title:
   description:
