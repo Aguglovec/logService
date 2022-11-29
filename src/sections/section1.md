@@ -1,5 +1,6 @@
 ---
-title: test
+title: test1
+sectionID: unique_id_1
 permalink: false
 date: 2020-09-19
 excerpt: Not yet native in 11ty, creating draft posts is easy.
@@ -18,7 +19,7 @@ tags:
   - structure
   - customization
   - frontmatter
-component: hero-video-section
+section: hero-video-section
 hero: graphic # options: carousel, graphic, video, split (text & image)
 sectionSettings:
   height:

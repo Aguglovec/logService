@@ -21,12 +21,14 @@ pagination:
   reverse: true
   alias: sections
 ---
-
-{% for section in sections | reverse %}
-    {% set component = ['components/', section.data.component, '.njk'] %}
-
-    {% set sectionSettings = section.data.sectionSettings %}
-    {% include component | join %}
-
+{% for sectionOrder in sectionOrder.sectionOrder.section %}
+    {% set sectionID = sectionOrder.sectionID %}
+    {% for section in sections | reverse %}
+        {% if section.data.sectionID == sectionID %}
+            {% set component = ['components/', section.data.section, '.njk'] %}
+            {% set sectionSettings = section.data.sectionSettings %}
+            {% include component | join %}
+        {% endif %}
+    {% endfor %}
 {% endfor %}
 
