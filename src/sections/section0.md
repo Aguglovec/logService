@@ -24,7 +24,6 @@ tags:
   - customization
   - frontmatter
 section: hero-graphic-section
-hero: graphic # options: carousel, graphic, video, split (text & image)
 sectionSettings:
   height:
     mobile: # options = h-1/1 (default = full screen), h-1/2, h-1/3, h-3/4, h-9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)

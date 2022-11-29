@@ -1,4 +1,10 @@
 <div class="mb-16 {{ sectionSettings.height.mobile or "h-1/1" }} sm:{{ sectionSettings.height.desktop or sectionSettings.height.mobile or "h-1/1" }}">
+  
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+
   <div class="h-full main-carousel" data-flickity='{"lazyLoad":"1", "wrapAround":true, "fullscreen": true}'>
 
     {% for image in sectionSettings.carousel.images %}
