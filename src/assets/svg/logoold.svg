@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 102" style="enable-background:new 0 0 1000 102;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'Corbel';}
+	.st1{font-size:84.6492px;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:url(#SVGID_00000156546390936283834300000000803452910117314224_);}
+</style>
+<text transform="matrix(1 0 0 1 251.3252 76.8945)" class="st0 st1">LogService AMZ PL</text>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="111.5339" y1="33.5191" x2="200.79" y2="48.791">
+		<stop  offset="0.1693" style="stop-color:#00FFFF"/>
+		<stop  offset="0.6188" style="stop-color:#00B2FF"/>
+		<stop  offset="0.9137" style="stop-color:#0000FF"/>
+	</linearGradient>
+	<path class="st2" d="M173.58,72l-47.46-33.56c-7.46-5.28-9.23-15.6-3.96-23.06l0,0c5.28-7.46,15.6-9.23,23.06-3.96l47.46,33.56
+		c7.46,5.28,9.23,15.6,3.96,23.06l0,0C191.37,75.51,181.04,77.28,173.58,72z"/>
+</g>
+<g>
+	
+		<linearGradient id="SVGID_00000065070641405445528100000004073990449083116959_" gradientUnits="userSpaceOnUse" x1="118.386" y1="90.7039" x2="194.4525" y2="49.9127">
+		<stop  offset="5.076142e-03" style="stop-color:#31FF5B"/>
+		<stop  offset="0.6827" style="stop-color:#009EDA"/>
+		<stop  offset="0.9979" style="stop-color:#0042E3"/>
+	</linearGradient>
+	<path style="fill:url(#SVGID_00000065070641405445528100000004073990449083116959_);" d="M190.27,73.45l-53.21,23.39
+		c-8.37,3.68-18.13-0.12-21.81-8.49l0,0c-3.68-8.37,0.12-18.13,8.49-21.81l53.21-23.39c8.37-3.68,18.13,0.12,21.81,8.49l0,0
+		C202.43,60.01,198.63,69.77,190.27,73.45z"/>
+</g>
+</svg>

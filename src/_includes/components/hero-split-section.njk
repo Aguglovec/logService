@@ -1,8 +1,8 @@
 <main class="lg:relative {{ sectionSettings.bg.color or 'bg-black' }} {{ sectionSettings.height.mobile or 'h-1/1' }} sm:{{ sectionSettings.height.desktop or sectionSettings.height.mobile or 'h-1/1' }}" id="{{ section.data.eleventyNavigation.url }}">
   <div
-        class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left"
+        class="w-full pt-16 pb-20 max-w-7xl lg:py-48 text-left"
       >
-    <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16 ">
+    <div class=" lg:w-1/2 px-8 md:px-16 lg:pl-32 lg:pr-8">
 
       <h2
             class="text-4xl font-semibold leading-10 tracking-tight {{ sectionSettings.headingTextColor or 'text-white' }} sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl"
@@ -10,7 +10,7 @@
         {{ sectionSettings.headingText | safe }}
       </h2>
       <p
-            class="max-w-md mx-auto mt-3 text-lg {{ sectionSettings.subheadingTextColor }} sm:text-xl md:mt-5 md:max-w-3xl"
+            class="max-w-md mx-auto mt-3 text-lg {{ sectionSettings.subheadingTextColor }} font-light md:text-2xl lg:text-3xl md:mt-5 md:max-w-3xl"
           >
         {{ sectionSettings.subheadingText | safe }}
 

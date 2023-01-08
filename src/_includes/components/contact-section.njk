@@ -1,27 +1,15 @@
-<div class="relative bg-white" id="{{ section.data.eleventyNavigation.url }}">
-  <div class="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
-    <div class="px-4 py-4 bg-gray-50 sm:px-6 lg:col-span-2 lg:px-8 lg:py-8 xl:pr-12">
-      <div class="max-w-lg mx-auto">
-        <h2 class="text-3xl font-extrabold leading-8 tracking-tight text-gray-600 sm:text-3xl sm:leading-9">
-          Get in touch
+<div class="relative {{ sectionSettings.bg.color or 'bg-white' }}  " id="{{ section.data.eleventyNavigation.url }}">
+    <div class="absolute inset-0 z-negative  bg-fixed bg-no-repeat bg-cover {{ sectionSettings.bg.imagePosition or 'bg-center' }} {{ sectionSettings.bg.opacityMobile or 'opacity-100' }} md:{{ sectionSettings.bg.opacityDesktop or sectionSettings.bg.opacityMobile or 'opacity-100' }}" style="background-image: url(/assets/images/{{ sectionSettings.bg.image }});"></div>
+
+  <div class="relative mx-auto lg:grid lg:grid-cols-5 px-8 md:px-16 lg:px-32">
+    <div class="px-4 py-4  sm:px-6 lg:col-span-3 ">
+      <div class="max-w-lg ">
+        <h2 class="text-3xl font-extrabold leading-8 tracking-tight {{sectionSettings.headingTextColor}} sm:text-3xl sm:leading-9">
+          {{sectionSettings.headingText}}
         </h2>
-        <p class="mt-3 text-lg leading-6 text-gray-500">
-          This contact form is fully functional and will automatically work if you <a href="https://docs.netlify.com/forms/setup/" target="_blank">host on Netlify!</a>
-          <br><br>
-          The address info below is managed in <code>/src/_data/meta.js</code>.
-          <br><br>
-          Note the difference in <code>address.phoneDisplay</code> and <code>address.phoneCall</code> to ensure mobile users will be able to correctly dial just by pressing the phone link.
-        </p>
-        <dl class="mt-8 text-base leading-6 text-gray-500">
-          <div>
-            <dt class="sr-only">Postal address</dt>
-            <dd>
-              <p>{{ meta.address.street }}</p>
-              <p>{{ meta.address.city }}, {{ meta.address.state }}
-                {{ meta.address.zip }}</p>
-            </dd>
-          </div>
-          <div class="mt-6">
+
+        <dl class="mb-8 text-base leading-6 text-gray-500">
+                    <div class="mt-6">
             <dt class="sr-only">Phone number</dt>
             <dd class="flex">
               <svg class="flex-shrink-0 w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,16 +34,19 @@
         </dl>
       </div>
     </div>
-    <div class="px-4 py-16 bg-white sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+    <div class="px-4 py-16 bg-white bg-opacity-30 sm:px-6 lg:col-span-2 lg:py-24 lg:px-8 xl:pl-12">
+        <h2 class="text-3xl font-extrabold leading-8 tracking-tight {{sectionSettings.headingTextColor}} sm:text-3xl sm:leading-9 pb-8">
+          Отправьте нам запрос
+        </h2>
       <div class="max-w-lg mx-auto lg:max-w-none">
         <form name="contact" action="https://formsubmit.co/{{sectionSettings.formID or structure.g_formID}}" method="POST" data-netlify-recaptcha="true" data-netlify-honeypot="bot-field" data-netlify="true" class="grid grid-cols-1 row-gap-6">
           <p class="hidden">
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
           </p>
           <div>
-            <label for="full_name" class="sr-only">Full name</label>
+            <label for="full_name" class="sr-only">Имя</label>
             <div class="relative rounded-md shadow-sm">
-              <input id="full_name" name="name" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Full name">
+              <input id="full_name" name="name" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Имя">
             </div>
           </div>
           <div>
@@ -65,28 +56,28 @@
             </div>
           </div>
           <div>
-            <label for="phone" class="sr-only">Phone</label>
+            <label for="phone" class="sr-only">Телефон</label>
             <div class="relative rounded-md shadow-sm">
-              <input id="phone" name="phone" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Phone">
+              <input id="phone" name="phone" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Телефон">
             </div>
           </div>
           <div>
-            <label for="message" class="sr-only">Message</label>
+            <label for="message" class="sr-only">Сообщение</label>
             <div class="relative rounded-md shadow-sm">
-              <textarea id="message" name="message" rows="4" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Message"></textarea>
+              <textarea id="message" name="message" rows="4" class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input" placeholder="Сообщение"></textarea>
             </div>
           </div>
           <div data-netlify-recaptcha="true"></div>
           <div class="">
             <span class="inline-flex rounded-md shadow-sm">
               <button type="submit" class="py-4 px-6 my-4 rounded-lg {{ colors.buttonDefault.text or colors.buttonCustom.text }} hover:{{ colors.buttonDefault.textHover or colors.buttonCustom.textHover }} {{ colors.buttonDefault.bg or colors.buttonCustom.bg }} hover:{{ colors.buttonDefault.bgHover or colors.buttonCustom.bgHover }} {{ colors.buttonDefault.border or colors.buttonCustom.border }}">
-                Submit
+                Отправить
               </button>
             </span>
           </div>
         </form>
-        <div class="p-4 italic text-gray-600 bg-indigo-100 border rounded-lg border-indego-300">This form uses the <a class="font-semibold text-indigo-700 underline" href="https://docs.netlify.com/forms/spam-filters/#extra-spam-prevention">basic spam and recaptcha features provided by Netlify</a> . But you could wire in your own form validation if you like. Take a look at <a class="font-semibold text-indigo-700 underline" href="https://github.com/mattkingshott/iodine">Iodine.js</a> if you don't already have a fave form validator.</div>
       </div>
     </div>
+  </div>
   </div>
 </div>

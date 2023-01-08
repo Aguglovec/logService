@@ -1,6 +1,6 @@
 module.exports = {
 	siteURL: process.env.URL || 'http://localhost:8080',
-	siteName: "Shane Robinson's 11ty | TailwindCSS | Alpine.js Template",
+	siteName: "Private Label Amazon Logistic Service",
 	siteDescription:
 		'A highly configurable 11ty template to quickly spin up a fully functional website with TailwindCSS and Alpine.js baked in.',
 	siteImage: '/assets/images/site/default.png',
@@ -16,8 +16,8 @@ module.exports = {
 		city: 'Anytown',
 		state: 'KZ',
 		zip: '54321',
-		phoneDisplay: '+1 (123) 456-7890',
-		phoneCall: '+11234567890',
-		email: 'hello@domain.com',
+		phoneDisplay: '+38 (050) 343-95-51',
+		phoneCall: '+380503439551',
+		email: 'dikat82@gmail.com',
 	},
 }
